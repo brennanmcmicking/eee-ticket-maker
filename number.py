@@ -11,7 +11,7 @@ else:
 front = Image.open("front.png").convert("RGB")
 reverse = Image.open("reverse.png").convert("RGB")
 
-font = ImageFont.truetype("font.ttf", 72)
+font = ImageFont.truetype("font.otf", 72)
 
 images = []
 
@@ -23,7 +23,7 @@ for i in range(1, n + 1):
     images.append(r)
 
 images[0].save(
-    "output.pdf", "PDF" ,resolution=100.0, save_all=True, append_images=images[1:]
+    "output.pdf", "PDF", resolution=100.0, save_all=True, append_images=images[1:]
 )
 
 front.close()
